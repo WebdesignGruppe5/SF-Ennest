@@ -1,0 +1,214 @@
+<html>
+<head>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta charset="utf-8">	        
+        <meta name="description" content="SF-Ennest Sportfreunde Ennest Tischtennis table-tennis">
+        <meta name="author" content="Christopher Göbel Marc Wildermuth">
+        <link rel="shortcut icon" href="css/img/logoklein.png"/>
+		
+        <title>SF-Ennest</title>
+
+	<!-- Kalender-Dateien einbinden -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/veranstaltungen.css" />
+		<script type="text/javascript" src="js/calendar.js"></script>
+		
+</head>
+<body>
+
+<!-- Navigation -->
+		<nav class="navbar-default navbar-fixed-top">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header page-scroll">
+					<button type="button" id="navbut" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+                        <li><a class="page-scroll" href="index.php">News</a></li>
+                        <li><a class="page-scroll" href="mitglieder.html">Mitglieder</a></li>
+                        <li><a class="page-scroll" href="veranstaltungen.html">Veranstaltungen</a></li>
+                        <li><a class="page-scroll" href="history.html">History</a></li>
+                        <li><a class="page-scroll" href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                    <div class="navbar-right">
+                    <img src="" class="img-responsive" alt="logo">
+                        </div>
+                </div>
+               
+                
+				<!-- /.navbar-collapse -->
+			
+
+		</nav>
+		
+     <!-- -----------------------------------------------Inhalt der Seite-------------------------- -->
+        
+	<div class="abstand"> </div>		
+	
+	<div class="container">
+        
+        <div class="col-md-12 text-center">
+            <h2>Veranstaltungen 2016</h2>
+        </div>
+        
+        <div class="row">
+        
+            <div class="col-xs-12 col-md-12 text-center">
+			
+			<table align = "center">
+				<thead>
+					<tr>
+						<th style = "text-align: left;">Datum</th>
+						<th>Termin</th>
+					</tr>	
+				</thead>
+				<tbody>
+					<tr>
+						<td class = "left">Sa. 20.02 - 18:00</td>
+						<td class = "right">TT-Generalversammlung in der SGV-Hütte</td>
+					</tr>
+					<tr>
+						<td class = "left">Mo. 31.10 - 18:00</td>
+						<td class = "right">Halloween-Feier auf dem Sportplatz Holzweg</td>
+					</tr>
+					<tr>
+						<td class = "left">Mi. 28.12 - 19:00</td>
+						<td class = "right">Weihnachtskegeln in der Tennishalle Milstenau</td>
+					</tr>
+				</tbody>
+			</table>
+			
+            </div>
+        </div>
+    
+		<div class="col-md-12 text-center">
+	
+	<table border=1 align = "center" id='calendar'>
+		<tr style='visibility:collapse;' hidden>
+			<td colspan=7 id='date_memory'>---</td>
+		</tr>
+		<tr>
+			<td class='calendar_head'><a class='calendar_link'
+				href='javascript:prevMonth()'> &laquo;</a></td>
+			<td colspan=5 class='calendar_head_month' id='calendar_month'>
+				---</td>
+			<td class='calendar_head'><a class='calendar_link'
+				href='javascript:nextMonth()'> &raquo;</a></td>
+		</tr>
+		<tr>
+			<td class='calendar_day'>Mo</td>
+			<td class='calendar_day'>Di</td>
+			<td class='calendar_day'>Mi</td>
+			<td class='calendar_day'>Do</td>
+			<td class='calendar_day'>Fr</td>
+			<td class='calendar_day'>Sa</td>
+			<td class='calendar_day'>So</td>
+		</tr>
+		<tr>
+			<td class='calendar_entry' id='calendar_entry_1'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_2'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_3'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_4'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_5'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_6'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_7'>-x-</td>
+		</tr>
+		<tr>
+			<td class='calendar_entry' id='calendar_entry_8'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_9'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_10'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_11'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_12'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_13'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_14'>-x-</td>
+		</tr>
+		<tr>
+			<td class='calendar_entry' id='calendar_entry_15'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_16'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_17'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_18'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_19'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_20'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_21'>-x-</td>
+		</tr>
+		<tr>
+			<td class='calendar_entry' id='calendar_entry_22'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_23'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_24'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_25'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_26'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_27'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_28'>-x-</td>
+		</tr>
+		<tr>
+			<td class='calendar_entry' id='calendar_entry_29'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_30'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_31'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_32'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_33'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_34'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_35'>-x-</td>
+		</tr>
+		<tr>
+			<td class='calendar_entry' id='calendar_entry_36'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_37'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_38'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_39'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_40'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_41'>-x-</td>
+			<td class='calendar_entry' id='calendar_entry_42'>-x-</td>
+		</tr>
+	</table>
+	
+	<br/>
+			<br/>
+			<form id='myform'>
+				<input id='datum' size=30/>
+			</form>		
+		</div>
+    </div>
+        
+        <div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            bal
+            
+        </div>
+
+<!-- -----------------------------Scritps-------------------------- -->
+	<script type="text/javascript" src="js/calendar.js"></script>
+	
+       <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+	   <script src="js/bootstrap.min.js"></script>
+	   
+	
+	
+	
+	<script type='text/javascript'>
+		iniCalendar();
+		
+		/*0 = wie bisher, Datum wird in die Box geschrieben*/
+		setReturnModus(1);
+		/*1 = neu, Eventtext wird in die Box geschrieben
+		Das event muss in der calendar.js in der Function
+		getEventtext definiert werden.*/
+		//setReturnModus(1);
+	</script>
+	
+	
+        
+    <!--<script src="javascript/bootstrap.min.js"></script>
+    <script src="javascript/bootstrap.js"></script>   --> 
+        
+
+     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </body>
+</html>
+
