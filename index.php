@@ -41,12 +41,12 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li><a class="page-scroll" href="index.php">News</a></li>
-						<li><a class="page-scroll" href="#mitglieder">Mitglieder</a></li>
-						<li><a class="page-scroll" href="#veranstaltungen">Veranstaltungen</a></li>
-						<li><a class="page-scroll" href="#history">History</a></li>
-						<li><a class="page-scroll" href="kontakt.html">Kontakt</a></li>
-					</ul>
+                        <li><a class="page-scroll" href="index.php">News</a></li>
+                        <li><a class="page-scroll" href="mitglieder.html">Mitglieder</a></li>
+                        <li><a class="page-scroll" href="veranstaltungen.html">Veranstaltungen</a></li>
+                        <li><a class="page-scroll" href="history.html">History</a></li>
+                        <li><a class="page-scroll" href="kontakt.html">Kontakt</a></li>
+                    </ul>
                     <div class="navbar-right">
                     <img src="" class="img-responsive" alt="logo">
                         </div>
@@ -116,7 +116,7 @@
             </div>
         </div>
         
-        
+        <a class="text-center link" href="newsarchiv.php">News Archiv</a>
         <div>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             bal

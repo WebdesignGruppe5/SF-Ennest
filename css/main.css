@@ -4,10 +4,7 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 	
 body{
-    background: url(img/sport1s.svg);
-    background-repeat: no-repeat;
-    background-attachment:fixed;
-    background-position: center;
+ 
     font-size: 20px;
         
 }
@@ -37,12 +34,19 @@ body{
   margin-left: 5%;
 }
 
-#bild1{
+.bilder{
     width: auto;
     height: auto;
 }
 #google_maps{
     box-shadow: 0px 0px 30px #000000;
+}
+
+table, th, td{
+	padding:1px 16px;
+    border: 2px solid black;
+	white-space:nowrap;
+
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
