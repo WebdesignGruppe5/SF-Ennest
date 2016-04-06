@@ -60,9 +60,9 @@
 
      <!-- -----------------------------------------------Inhalt der Seite--------------------------------------------------------------------------------------------------------------------------------------- -->
         
-        <div class="abstand"> </div>
-        
-        <div class="col-md-12 text-center abstand">
+        <section class="module parallax"> </section>
+        <div class="module content">
+        <div class="col-md-12 text-center">
             <h2>Hier finden Sie Neuigkeiten rund um den SF-Ennest</h2>
         </div>
         
@@ -125,7 +125,7 @@
         
         
 
-
+    </div>
     <!-- -----------------------------Scritps-------------------------- -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.min.js"></script>
