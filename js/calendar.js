@@ -52,7 +52,7 @@ function putDate(n)
 	else{
 		returnValue = getEventtext( d.getFullYear(), d.getMonth(), d.getDate());
 		if (!returnValue)
-			{returnValue = 'kein Event!';}
+			{returnValue = 'kein Event';}
 	}
 	
 	document.forms['myform'].elements['datum'].value = returnValue;
@@ -172,6 +172,7 @@ function loadcalendar()
 		//datum zusammenschreiben
 		var dx = new Date(y,m,zahl);
 		entry.style.backgroundColor='FFFFFF';
+		entry.style.fontWeight = 'normal';
 
 		//Eintragen der Daten ab ersten Tag im Monat und wenn es ein gültiges Datum ist
 		if (i >= dateDay && isValidDate(y,m,zahl))		
@@ -190,8 +191,8 @@ function loadcalendar()
 				bEvent = true;
 			}
 			//Wenn Tag ein Feiertag ist
-			if (isHoliday(m,zahl))
-				{entry.style.backgroundColor='#2EFE2E';}
+			//if (isHoliday(m,zahl))
+			//	{entry.style.backgroundColor='#2EFE2E';}
 			
 						
 			//heutiges Datum hervorheben			
@@ -243,13 +244,24 @@ function getEventtext(y,m,d)
 	//Monate fangen bei 0 an zuzählen
 	m++;
 	//definieren der Events
-	var h = new Array(2);
+	var h = [];
 	
 	//exemplarisch nehme ich eine
 	//Liste an Festivals her
-	h[0] = "20.2.2016|TT-Generalversammlung in der SGV-Hütte";
-	h[1] = "31.10.2016|Halloween-Feier auf dem Sportplatz Holzweg";
-	h[2] = "28.12.2016|Weihnachtskegeln in der Tennishalle Milstenau";
+	h.push("20.2.2016|19:00 - TT-Generalversammlung in der SGV-Hütte");
+	h.push("31.10.2016|19:00 - Halloween-Feier auf dem Sportplatz Holzweg");
+	h.push("28.12.2016|20:00 - Weihnachtskegeln in der Tennishalle Milstenau");
+	h.push("21.1.2016|19:30 - Heimspiel gegen TSV Aue-Wingeshausen");
+	h.push("11.2.2016|19:30 - Heimspiel gegen FGF Saalhausen");
+	h.push("25.2.2016|19:30 - Heimspiel gegen TTF Pannenklöpper Olpe");
+	h.push("10.3.2016|19:30 - Heimspiel gegen TuS Hilchenbach II");
+	h.push("21.4.2016|19:30 - Heimspiel gegen TTC Wenden II");
+	h.push("11.1.2016|20:00 - Auswärtsspiel gegen SV Dahl-Friedrichsthal II");
+	h.push("29.1.2016|19:30 - Auswärtsspiel gegen  	TTV Altfinnentrop");
+	h.push("19.2.2016|19:30 - Auswärtsspiel gegen TV Attendorn III");
+	h.push("4.3.2016|20:15 - Auswärtsspiel gegen TTG Netphen V");
+	h.push("8.4.2016|20:00 - Auswärtsspiel gegen DJK TuS 02 Siegen II");
+	h.push("15.4.2016|20:00 - Auswärtsspiel gegen TTV Lennestadt");
 	
 	var dH;
 	var eH;

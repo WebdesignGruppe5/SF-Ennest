@@ -1,6 +1,6 @@
 .calendar_link {
 	font-family: Arial;
-	font-size: 12px;
+	font-size: 20px;
 	text-align: center;
 	color: #000000;
 	text-decoration: none;
@@ -9,7 +9,7 @@
 
 .calendar_head {
 	font-family: Arial;
-	font-size: 15px;
+	font-size: 22px;
 	font-weight: bold;
 	text-align: center;
 	width: 25px;
@@ -17,7 +17,7 @@
 
 .calendar_head_month {
 	font-family: Arial;
-	font-size: 15px;
+	font-size: 22px;
 	font-weight: bold;
 	text-align: center;
 	width: 25px;
@@ -27,16 +27,25 @@
 
 .calendar_day {
 	font-family: Arial;
-	font-size: 14px;
+	font-size: 22px;
 	font-weight: bold;
 	text-align: center;
-	width: 25px;
+	width: 45px;
 	color: #FFFFFF;
-	background-color: #000000;
+	background-color: #31B404;
 }
 
 .calendar_entry {
 	font-family: Arial;
-	font-size: 12px;
+	font-size: 20px;
 	text-align: center;
+	height = 100;
 }
+
+#calendar tr td {height:45px;}
+
+output[type="text"]
+{
+    font-size:24px;
+}
+
