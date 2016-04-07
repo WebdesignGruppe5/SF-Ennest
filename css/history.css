@@ -1,0 +1,180 @@
+@import url(https://fonts.googleapis.com/css?family=Domine:400,700);
+@import url(https://fonts.googleapis.com/css?family=Russo+One);
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Allgemein
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+	
+body{
+ 
+    font-size: 20px;
+    font-family: 'Domine', serif;
+    background-color: aliceblue;
+        
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Russo One', sans-serif;
+}
+
+h2{
+    font-size: 35px;
+}
+h3{
+    font-size: 30px;
+}
+h4{
+    font-size: 27px;
+}
+h5{
+    font-size: 24px;
+}
+h6{
+    font-size: 22px;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Anpassungen
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.abstand{
+    margin-top: 10%;
+}
+
+.abstand-unten{
+    margin-bottom: 5%;
+}
+/**
+.col-sm-6{
+
+  padding-right: 5px;
+  padding-left: 5px;
+}
+**/
+
+.row {
+
+}
+
+.bilder{
+    width: auto;
+    height: auto;
+}
+#google_maps{
+    box-shadow: 0px 0px 30px #000000;
+}
+
+table, th, td{
+	padding:1px 16px;
+    border: 2px solid black;
+	white-space:nowrap;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.history .row img{
+   box-shadow: 0px 0px 30px #000000;
+}
+
+.history  .row2{
+   background-color: #D2D2F6;
+   padding-top:2%;
+   padding-bottom:2%;
+}
+    
+
+
+section.module.parallax{
+    background: url(img/platte.jpg);
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position: 50% 50%;
+    background-size:cover;
+    font-size: 20px;
+    height:500px;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Navbar
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.navbar-default {
+    background-color: rgba(0,0,0,0.0);
+	background-image: url(img/navbar.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+    height: 100px;
+}
+
+#bs-example-navbar-collapse-1
+{
+    background-color: darkblue;
+}
+.navbar-default .navbar-brand:hover,.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:active,.navbar-default .navbar-brand.active {
+    
+	color: #fec503;
+}
+.navbar-default .navbar-collapse {
+	border-color: rgba(255,255,255,.02)
+}
+
+/* Button wenn navbar kleiner wird */
+.navbar-default .navbar-toggle {
+	background-color: blue;
+	border-color: blue;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: silver;
+}
+.navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus {
+	background-color: #fed136;
+    border-color: #fed136;
+}
+.navbar-default .nav li a {
+	font-family: "Roboto",sans-serif;
+	/*Groß und klein Schreibung */
+    text-transform: capitalize;
+	font-weight: 600;
+	letter-spacing: 1px;
+	color: floralwhite;
+}
+.navbar-default .nav li a:hover,.navbar-default .nav li a:focus {
+	color: #fed136;
+	
+    background-color: rgba(0,0,0,0.3);
+}
+
+.navbar-brand{
+    float: right;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.Footer
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.footer{
+    background-color:darkblue;
+    height:100px;
+}
+.footer-content{
+    line-height:33px;
+    padding-top:33px;
+}
+.footer-content a{
+    color:floralwhite;
+    font-size:14px;
+}
+.footer-logo{
+    background-image:url(img/logoklein.png);
+    background-repeat:no-repeat;
+    background-size:contain;
+    height:100px;
+    width:100px;
+}
+
+/*Mitglieder*/
+.panel{
+    border:solid 1px;
+    border-radius: 2px;
+    box-shadow:0 2px 5px #ccc;
+    border-radius:20px;
+}
+.panel > div >img{
+    max-height:150px;
+    max-width:150px;
+}
