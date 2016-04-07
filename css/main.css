@@ -107,7 +107,7 @@ section.module.parallax{
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .footer{
     background-color:darkblue;
-    height:100px;
+    overflow:auto;
 }
 .footer-content{
     line-height:33px;
@@ -121,6 +121,12 @@ section.module.parallax{
     background-image:url(img/logoklein.png);
     background-repeat:no-repeat;
     background-size:contain;
+    background-position:center;
     height:100px;
     width:100px;
+}
+@media (max-width:991px){
+    .footer-logo{
+        margin:auto;
+    }
 }
