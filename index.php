@@ -39,16 +39,16 @@
 					</button>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-                        <li><a class="page-scroll" href="index.php">News</a></li>
-                        <li><a class="page-scroll" href="mitglieder.html">Mitglieder</a></li>
-                        <li><a class="page-scroll" href="veranstaltungen.html">Veranstaltungen</a></li>
-                        <li><a class="page-scroll" href="history.html">History</a></li>
-                        <li><a class="page-scroll" href="kontakt.html">Kontakt</a></li>
-                    </ul>
+						<li><a class="page-scroll" href="index.php">News</a></li>
+						<li><a class="page-scroll" href="mitglieder.html">Mitglieder</a></li>
+						<li><a class="page-scroll" href="veranstaltungen.html">Veranstaltungen</a></li>
+						<li><a class="page-scroll" href="history.html">History</a></li>
+						<li><a class="page-scroll" href="kontakt.html">Kontakt</a></li>
+					</ul>
                     <div class="navbar-right">
-                    <img src="" class="img-responsive" alt="logo">
+                    <img src="css/img/logo.jpg" class="img-responsive" alt="logo">
                         </div>
                 </div>
                
@@ -68,14 +68,14 @@
         
         <div class="row">
         
-             <div class="col-sm-6 text-center">
                  <!-- -----------------------------------------------PHP Teil Anfang---------------------------------------------------------------------------------------------------------------------- -->
                  <?php
                  
                         //Datenbank Abfrage
-                        $query = "SELECT * FROM News Where id = 1";
+                        $query = "SELECT * FROM News ORDER BY id DESC LIMIT 2";
 
-                        if ($stmt = mysqli_prepare($mysqli, $query)) {
+                        if ($stmt = mysqli_prepare($mysqli, $query)) 
+                        {
 
                             /* execute statement */
                             mysqli_stmt_execute($stmt);
@@ -84,20 +84,30 @@
                             mysqli_stmt_bind_result($stmt, $id, $datum, $text, $img, $Ueberschrift);
 
                             /* fetch values */
-                            while (mysqli_stmt_fetch($stmt)) {
-                                printf ("<b>%s</b> <br> %s <br> <img class='img-responsive img-thumbnail' src='%s'> \n", $Ueberschrift, $text, $img);
+                            while (mysqli_stmt_fetch($stmt)) 
+                            {
+                                printf ("
+                                    <div class='col-sm-6 text-center'>
+                                        <b>%s</b> 
+                                        <br> 
+                                        %s 
+                                        <br> 
+                                        <img class='img-responsive img-thumbnail' src='%s'>
+                                        </div>",$Ueberschrift, $text, $img);                                       
+                                
+                                
                             }
 
-                            /* close statement */
+                            // statement schließen
                             mysqli_stmt_close($stmt);
                         }
 
-                        /* close connection */
+                        //connection schließen
                         mysqli_close($mysqli);
 
                         ?>
                     <!-- -----------------------------------------------PHP Teil Ende---------------------------------------------------------------------------------------------------------------------- -->
-            </div>
+
             
             <!--
             <div class="col-sm-6 text-center">
@@ -108,23 +118,32 @@
                 <div><img class="img-responsive img-thumbnail" src="css/img/Trainer2011-2012.jpg"></div>
             </div>
             -->
-
-            <div class="col-sm-6 text-center">
-                <b>Sportfreunde Ennest suchen News</b>
-                <br>
-                Die Tischtennis-Mannschaft der Sportfreunde Ennest sucht verzweifelt nach News. Aber sie konnte keine finden.
-            </div>
         </div>
         
         <a class="text-center link" href="newsarchiv.php">News Archiv</a>
         <div>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            bal
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
             
         </div>
         
         
 
+    </div>
+        
+    <div class="footer">
+        <div class="col-sm-3 footer-logo-container">
+            <div class="footer-logo"></div>
+        </div>
+        <div class="col-sm-6 footer-content">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2 text-center"><a href="index.php">News</a></div>
+            <div class="col-sm-2 text-center"><a href="mitglieder.html">Mitglieder</a></div>
+            <div class="col-sm-2 text-center"><a href="veranstaltungen.html">Veranstaltungen</a></div>
+            <div class="col-sm-2 text-center"><a href="history.html">History</a></div>
+            <div class="col-sm-2 text-center"><a href="kontakt.html">Kontakt</a></div>
+            <div class="col-sm-1"></div>
+        </div>
     </div>
     <!-- -----------------------------Scritps-------------------------- -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -136,7 +155,9 @@
     <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
         
     
-    <script src="js/main.js"></script> 
+    <script src="js/main.js"></script>
+    <script src="konami-code-master/src/jquery.konami.min.js"></script>
+    <script src="js/konami.js"></script>
     </body>
 </html>
 
