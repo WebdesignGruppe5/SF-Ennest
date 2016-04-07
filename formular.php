@@ -2,16 +2,24 @@
 
     
     <?php
+<<<<<<< HEAD
     //Verbindung einbinden
     include('conn.php');
+=======
+>>>>>>> origin/master
     session_start();
     
     
    
+<<<<<<< HEAD
     if ($_SESSION['login'] == 0){
         echo('Nicht eingeloggt');
     }else{
         printf("
+=======
+    if (!empty($_SESSION['login']) && $_SESSION['login'] == 1 ){
+         printf("
+>>>>>>> origin/master
         <html lang='en'>
         <head>
         <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0'>
@@ -97,6 +105,14 @@
         
     </body>
       </html>  ");
+<<<<<<< HEAD
+=======
+        
+        
+       
+    }else{
+        echo('Nicht eingeloggt');
+>>>>>>> origin/master
     }
 
    
