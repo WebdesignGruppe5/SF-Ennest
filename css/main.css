@@ -1,4 +1,4 @@
-
+@import url(https://fonts.googleapis.com/css?family=Doppio+One);
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1. Allgemein
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -6,6 +6,7 @@
 body{
  
     font-size: 20px;
+    font-family: 'Doppio One', sans-serif;
         
 }
 
@@ -121,10 +122,11 @@ section.module.parallax{
     background-image:url(img/logoklein.png);
     background-repeat:no-repeat;
     background-size:contain;
-    background-position:center;
+	background-position: center;
     height:100px;
     width:100px;
 }
+
 @media (max-width:991px){
     .footer-logo{
         margin:auto;
