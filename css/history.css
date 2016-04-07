@@ -149,6 +149,7 @@ section.module.parallax{
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .footer{
     background-color:darkblue;
+<<<<<<< HEAD
     font-size:14px;
     color:gray;
 }
@@ -160,6 +161,25 @@ section.module.parallax{
     margin:auto;
 }
 
+=======
+    height:100px;
+}
+.footer-content{
+    line-height:33px;
+    padding-top:33px;
+}
+.footer-content a{
+    color:floralwhite;
+    font-size:14px;
+}
+.footer-logo{
+    background-image:url(img/logoklein.png);
+    background-repeat:no-repeat;
+    background-size:contain;
+    height:100px;
+    width:100px;
+}
+>>>>>>> origin/master
 
 /*Mitglieder*/
 .panel{
