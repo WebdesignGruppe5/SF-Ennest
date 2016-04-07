@@ -126,3 +126,10 @@ section.module.parallax{
     height:100px;
     width:100px;
 }
+.panel{
+    border:solid 1px;
+    border-radius: 2px;
+    box-shadow:0 2px 5px #ccc;
+    border-radius:20px;
+    padding:5px;
+}
