@@ -11,7 +11,9 @@
         <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
         
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">    
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/kontakt.css"> 
+        
     </head>
     
     <body>
@@ -30,29 +32,26 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li><a class="page-scroll" href="index.php">News</a></li>
-						<li><a class="page-scroll" href="#mitglieder">Mitglieder</a></li>
-						<li><a class="page-scroll" href="#veranstaltungen">Veranstaltungen</a></li>
+						<li><a class="page-scroll" href="mitglieder.php">Mitglieder</a></li>
+						<li><a class="page-scroll" href="veranstaltungen.html">Veranstaltungen</a></li>
 						<li><a class="page-scroll" href="history.html">History</a></li>
 						<li><a class="page-scroll" href="kontakt.html">Kontakt</a></li>
 					</ul>
-                    <div class="navbar-brand">
-                    <img src="img/logo.jpg" class="img-responsive" alt="logo" href="index.html">
-                        </div>
+                   
                 </div>
 				<!-- /.navbar-collapse -->
 		</nav>
-
-        <section class="abstand" id="kontakt">
-            <div class ="container">
+        
+        <div class ="abstand abstand-unten">
+            <div class="container" id="kontakt">
                 <div class="col-xs-12 col-sm-6" id="anschrift">
                     <p>Wenn Sie Fragen oder Anregungen zu SF-Ennest.de haben, können Sie uns über verschiedene Wege erreichen.</p>
                     
                     <h3>Anschrift</h3>
                     <ul class="list-unstyled">
-                        <li class=listItem>Beispielstraße 32</li>
+                        <li class=listItem>Biekengang 6</li>
                         <li class=listItem>57439 Attendorn</li>
                         <li class=listItem>Deutschland</li>
-                        <li class=listItem>Telefon: 01234/567890</li>
                         <li class=listItem>Email: info@sf-ennest.de</li>     
                     </ul> 
                     
@@ -73,17 +72,42 @@
                 <div class="col-sm-6" id="google_maps_div">
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.054648504154!2d7.910891315956447!3d51.144343345003676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b9540c91c21551%3A0xa652abdfd25c17d4!2sBiekegang+6%2C+57439+Attendorn!5e0!3m2!1sde!2sde!4v1459791130133" width="600" height="600" frameborder="0" style="border:0; box-shadow: 0px 0px 30px #000000" allowfullscreen></iframe>
                 </div>
-                 
-                <div class="col-xs-12 abstand" id="AGB">
+            </div>
+        </div>
+        
+        <div id="AGB">
+            <div class="container">
+                <div class="col-xs-12 abstand-unten" >
                     <h5>Wichtiger Hinweis zu allen Links:</h5>
                     <p>Mit Urteil vom 12. Mai 1998 - 312 O 85/98 - "Haftung für Links" hat das Landgericht (LG) Hamburg entschieden, dass man durch das Setzen eines Links, die Inhalte der gelinkten Seite ggf. mit zu      verantworten hat. Dies kann - so das LG - nur dadurch verhindert werden, dass man sich ausdrücklich von diesen Inhalten distanziert.
                        Wir haben auf den Seiten dieser Homepage Links zu anderen Seiten im Internet gelegt. Für all diese Links gilt: Wir möchten ausdrücklich betonen, dass wir keinerlei Einfluss auf die Gestaltung und die Inhalte der gelinkten Seiten haben. Deshalb distanzieren wir uns hiermit ausdrücklich von allen Inhalten aller gelinkten Seiten auf dieser Homepage.
                     </p>
                 </div>
-             
-            </div>
-        </section>
+             </div>
+        </div>
+        
 
+<section class="footer">
+        <div class="container">
+            <div class="row">
+		<div class="col-md-5 text-center">
+		    <h5>Links</h5>
+		    <ul class="list-unstyled">
+			<li><a href="kontakt.html">Kontakt</a></li>
+		    </ul>
+		</div>
+		<div class="col-md-2 footer-logo-container">
+		    <img src="css/img/logoklein.png">
+		</div>
+		<div class="col-md-5 text-center">
+		    <h5>Adresse</h5>
+		    Biekengang 6<br>
+		    57439 Attendorn<br>
+		    info@sf-ennest.de<br><br>
+		</div>
+	    </div>
+	</div>
+</section>
     <!-- -----------------------------Scripts-------------------------- -->
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         

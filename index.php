@@ -17,7 +17,6 @@
     
         
         <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
-        
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         
@@ -42,14 +41,12 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li><a class="page-scroll" href="index.php">News</a></li>
-						<li><a class="page-scroll" href="mitglieder.html">Mitglieder</a></li>
+						<li><a class="page-scroll" href="mitglieder.php">Mitglieder</a></li>
 						<li><a class="page-scroll" href="veranstaltungen.html">Veranstaltungen</a></li>
 						<li><a class="page-scroll" href="history.html">History</a></li>
 						<li><a class="page-scroll" href="kontakt.html">Kontakt</a></li>
 					</ul>
-                    <div class="navbar-right">
-                    <img src="css/img/logo.jpg" class="img-responsive" alt="logo">
-                        </div>
+
                 </div>
                
                 
@@ -60,107 +57,96 @@
 
      <!-- -----------------------------------------------Inhalt der Seite--------------------------------------------------------------------------------------------------------------------------------------- -->
         
-        <section class="module parallax"> </section>
+        <section class="module parallax parallax-1"> </section>
         <div class="module content">
-        <div class="col-md-12 text-center">
-            <h2>Hier finden Sie Neuigkeiten rund um den SF-Ennest</h2>
-        </div>
+            <div class="col-md-12 text-center">
+                <h2>Hier finden Sie Neuigkeiten rund um den SF-Ennest</h2>
+            </div>
         
-        <div class="row">
-        
-                 <!-- -----------------------------------------------PHP Teil Anfang---------------------------------------------------------------------------------------------------------------------- -->
-                 <?php
-                 
-                        //Datenbank Abfrage
-                        $query = "SELECT * FROM News ORDER BY id DESC LIMIT 2";
+            <div class="row">
 
-                        if ($stmt = mysqli_prepare($mysqli, $query)) 
-                        {
+                     <!-- -----------------------------------------------PHP Teil Anfang---------------------------------------------------------------------------------------------------------------------- -->
+                     <?php
 
-                            /* execute statement */
-                            mysqli_stmt_execute($stmt);
+                            //Datenbank Abfrage
+                            $query = "SELECT * FROM News ORDER BY id DESC LIMIT 2";
 
-                            /* bind result variables */
-                            mysqli_stmt_bind_result($stmt, $id, $datum, $text, $img, $Ueberschrift);
-
-                            /* fetch values */
-                            while (mysqli_stmt_fetch($stmt)) 
+                            if ($stmt = mysqli_prepare($mysqli, $query)) 
                             {
-                                printf ("
-                                    <div class='col-sm-6 text-center'>
-                                        <b>%s</b> 
-                                        <br> 
-                                        %s 
-                                        <br> 
-                                        <img class='img-responsive img-thumbnail' src='%s'>
-                                        </div>",$Ueberschrift, $text, $img);                                       
-                                
-                                
+
+                                /* execute statement */
+                                mysqli_stmt_execute($stmt);
+
+                                /* bind result variables */
+                                mysqli_stmt_bind_result($stmt, $id, $datum, $text, $img, $Ueberschrift);
+
+                                /* fetch values */
+                                while (mysqli_stmt_fetch($stmt)) 
+                                {
+                                    printf ("
+                                        <div class='col-sm-6 text-center panel news-box'>
+                                            <b>%s</b> 
+                                            <br> 
+                                            %s 
+                                            <br> 
+                                            <img class='img-responsive img-thumbnail' src='%s'>
+                                            </div>",$Ueberschrift, $text, $img);                                       
+
+
+                                }
+
+                                // statement schließen
+                                mysqli_stmt_close($stmt);
                             }
 
-                            // statement schließen
-                            mysqli_stmt_close($stmt);
-                        }
+                            //connection schließen
+                            mysqli_close($mysqli);
 
-                        //connection schließen
-                        mysqli_close($mysqli);
+                            ?>
+                        <!-- -----------------------------------------------PHP Teil Ende---------------------------------------------------------------------------------------------------------------------- -->
 
-                        ?>
-                    <!-- -----------------------------------------------PHP Teil Ende---------------------------------------------------------------------------------------------------------------------- -->
 
-            
-            <!--
-            <div class="col-sm-6 text-center">
-                <b>Sportfreunde Ennest starten neue Jugendoffensive</b>
-                <br>
-                Die Tischtennis-Jugendmannschaft der Sportfreunde Ennest konnte zwei mal in Folge die Meisterschaft in ihrer Klasse erringen (Jugend-Kreisklasse, Jugend-Kreisliga). Leider muss ein Großteil der Jugendspieler für die kommende Saison altersbedingt ausscheiden. Nichtsdestotrotz wollen die Sportfreunde die seit Jahren hervorragende Jugendarbeit erfolgreich fortführen. Hierzu steht das neuformierte, motivierte Trainerteam um Hans-Jürgen Peter, Kai Lammersmann und Thimo Gassenhuber bereit, das vor kurzem die Trainerlizenz erworben hat und das Training mit neuestem Equipment (Ballroboter, Returnboard, etc.) leiten wird. Am Tischtennissport interessierte Schüler/innen und Jugendliche, die am Training teilnehmen bzw. in eine Trainingseinheit hineinschnuppern wollen, sind hierzu herzlich eingeladen. Das Training findet jeweils Montags und Donnerstags von 18.00 Uhr bis 19.30 Uhr in der Grundschulturnhalle Ennest statt. Regulärer Trainingsbeginn – auch für die Herrenmannschaften der Sportfreunde Ennest – ist der kommende Montag, 22. August.
-                
-                <div><img class="img-responsive img-thumbnail" src="css/img/Trainer2011-2012.jpg"></div>
+                <!--
+                <div class="col-sm-6 text-center">
+                    <b>Sportfreunde Ennest starten neue Jugendoffensive</b>
+                    <br>
+                    Die Tischtennis-Jugendmannschaft der Sportfreunde Ennest konnte zwei mal in Folge die Meisterschaft in ihrer Klasse erringen (Jugend-Kreisklasse, Jugend-Kreisliga). Leider muss ein Großteil der Jugendspieler für die kommende Saison altersbedingt ausscheiden. Nichtsdestotrotz wollen die Sportfreunde die seit Jahren hervorragende Jugendarbeit erfolgreich fortführen. Hierzu steht das neuformierte, motivierte Trainerteam um Hans-Jürgen Peter, Kai Lammersmann und Thimo Gassenhuber bereit, das vor kurzem die Trainerlizenz erworben hat und das Training mit neuestem Equipment (Ballroboter, Returnboard, etc.) leiten wird. Am Tischtennissport interessierte Schüler/innen und Jugendliche, die am Training teilnehmen bzw. in eine Trainingseinheit hineinschnuppern wollen, sind hierzu herzlich eingeladen. Das Training findet jeweils Montags und Donnerstags von 18.00 Uhr bis 19.30 Uhr in der Grundschulturnhalle Ennest statt. Regulärer Trainingsbeginn – auch für die Herrenmannschaften der Sportfreunde Ennest – ist der kommende Montag, 22. August.
+
+                    <div><img class="img-responsive img-thumbnail" src="css/img/Trainer2011-2012.jpg"></div>
+                </div>
+                -->
             </div>
-            -->
-        </div>
         
-        <a class="text-center link" href="newsarchiv.php">News Archiv</a>
-        <div>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        
-            
-        </div>
-        
+            <div class="text-center">
+                <h3><a class="link" href="newsarchiv.php">News Archiv</a></h3>
+            </div>
         
 
+
     </div>
-<<<<<<< HEAD
+<section class="module parallax parallax-2"></section>
         
-    <div class="footer">
-        <div class="col-sm-3 footer-logo-container">
-            <div class="footer-logo"></div>
-        </div>
-        <div class="col-sm-6 footer-content">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-2 text-center"><a href="index.php">News</a></div>
-            <div class="col-sm-2 text-center"><a href="mitglieder.html">Mitglieder</a></div>
-            <div class="col-sm-2 text-center"><a href="veranstaltungen.html">Veranstaltungen</a></div>
-            <div class="col-sm-2 text-center"><a href="history.html">History</a></div>
-            <div class="col-sm-2 text-center"><a href="kontakt.html">Kontakt</a></div>
-            <div class="col-sm-1"></div>
-=======
-    
-    <div class="footer">
-        <div class="col-md-3 footer-logo-container">
-            <div class="footer-logo"></div>
-        </div>
-        <div class="col-md-6 footer-content">
-            <div class="col-md-1"></div>
-            <div class="col-md-2 text-center"><a href="index.php">News</a></div>
-            <div class="col-md-2 text-center"><a href="mitglieder.html">Mitglieder</a></div>
-            <div class="col-md-2 text-center"><a href="veranstaltungen.html">Veranstaltungen</a></div>
-            <div class="col-md-2 text-center"><a href="history.html">History</a></div>
-            <div class="col-md-2 text-center"><a href="kontakt.html">Kontakt</a></div>
-            <div class="col-md-1"></div>
->>>>>>> origin/master
-        </div>
-    </div>
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+		<div class="col-md-5 text-center">
+		    <h5>Links</h5>
+		    <ul class="list-unstyled">
+			<li><a href="kontakt.html">Kontakt</a></li>
+		    </ul>
+		</div>
+		<div class="col-md-2 footer-logo-container">
+		    <img src="css/img/logoklein.png">
+		</div>
+		<div class="col-md-5 text-center">
+		    <h5>Adresse</h5>
+		    Biekengang 6<br>
+		    57439 Attendorn<br>
+		    info@sf-ennest.de<br><br>
+		</div>
+	    </div>
+	</div>
+</section>
     <!-- -----------------------------Scritps-------------------------- -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.min.js"></script>
