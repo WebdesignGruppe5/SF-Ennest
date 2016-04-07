@@ -126,6 +126,21 @@
         
 
     </div>
+    
+    <div class="footer">
+        <div class="col-sm-3 footer-logo-container">
+            <div class="footer-logo"></div>
+        </div>
+        <div class="col-sm-6 footer-content">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2 text-center"><a href="index.php">News</a></div>
+            <div class="col-sm-2 text-center"><a href="mitglieder.html">Mitglieder</a></div>
+            <div class="col-sm-2 text-center"><a href="veranstaltungen.html">Veranstaltungen</a></div>
+            <div class="col-sm-2 text-center"><a href="history.html">History</a></div>
+            <div class="col-sm-2 text-center"><a href="kontakt.html">Kontakt</a></div>
+            <div class="col-sm-1"></div>
+        </div>
+    </div>
     <!-- -----------------------------Scritps-------------------------- -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.min.js"></script>
