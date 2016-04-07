@@ -130,6 +130,7 @@
         
 
     </div>
+<<<<<<< HEAD
         
     <div class="footer">
         <div class="col-sm-3 footer-logo-container">
@@ -143,6 +144,21 @@
             <div class="col-sm-2 text-center"><a href="history.html">History</a></div>
             <div class="col-sm-2 text-center"><a href="kontakt.html">Kontakt</a></div>
             <div class="col-sm-1"></div>
+=======
+    
+    <div class="footer">
+        <div class="col-md-3 footer-logo-container">
+            <div class="footer-logo"></div>
+        </div>
+        <div class="col-md-6 footer-content">
+            <div class="col-md-1"></div>
+            <div class="col-md-2 text-center"><a href="index.php">News</a></div>
+            <div class="col-md-2 text-center"><a href="mitglieder.html">Mitglieder</a></div>
+            <div class="col-md-2 text-center"><a href="veranstaltungen.html">Veranstaltungen</a></div>
+            <div class="col-md-2 text-center"><a href="history.html">History</a></div>
+            <div class="col-md-2 text-center"><a href="kontakt.html">Kontakt</a></div>
+            <div class="col-md-1"></div>
+>>>>>>> origin/master
         </div>
     </div>
     <!-- -----------------------------Scritps-------------------------- -->

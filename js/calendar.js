@@ -187,7 +187,7 @@ function loadcalendar()
 			else{
 				entry.style.backgroundColor='#00FFFF';
 				//Eventtext wird als Tooltip angezeigt
-				entry.title = getEventtext(y,m,zahl);
+				entry.title = Utf8Decode(getEventtext(y,m,zahl));
 				bEvent = true;
 			}
 			//Wenn Tag ein Feiertag ist
@@ -248,20 +248,20 @@ function getEventtext(y,m,d)
 	
 	//exemplarisch nehme ich eine
 	//Liste an Festivals her
-	h.push("20.2.2016|19:00 - TT-Generalversammlung in der SGV-Hütte");
+	h.push("20.2.2016|19:00 - TT-Generalversammlung in der SGV-Huette");
 	h.push("31.10.2016|19:00 - Halloween-Feier auf dem Sportplatz Holzweg");
 	h.push("28.12.2016|20:00 - Weihnachtskegeln in der Tennishalle Milstenau");
 	h.push("21.1.2016|19:30 - Heimspiel gegen TSV Aue-Wingeshausen");
 	h.push("11.2.2016|19:30 - Heimspiel gegen FGF Saalhausen");
-	h.push("25.2.2016|19:30 - Heimspiel gegen TTF Pannenklöpper Olpe");
+	h.push("25.2.2016|19:30 - Heimspiel gegen TTF Pannenkloepper Olpe");
 	h.push("10.3.2016|19:30 - Heimspiel gegen TuS Hilchenbach II");
 	h.push("21.4.2016|19:30 - Heimspiel gegen TTC Wenden II");
-	h.push("11.1.2016|20:00 - Auswärtsspiel gegen SV Dahl-Friedrichsthal II");
-	h.push("29.1.2016|19:30 - Auswärtsspiel gegen  	TTV Altfinnentrop");
-	h.push("19.2.2016|19:30 - Auswärtsspiel gegen TV Attendorn III");
-	h.push("4.3.2016|20:15 - Auswärtsspiel gegen TTG Netphen V");
-	h.push("8.4.2016|20:00 - Auswärtsspiel gegen DJK TuS 02 Siegen II");
-	h.push("15.4.2016|20:00 - Auswärtsspiel gegen TTV Lennestadt");
+	h.push("11.1.2016|20:00 - Auswaertsspiel gegen SV Dahl-Friedrichsthal II");
+	h.push("29.1.2016|19:30 - Auswaertsspiel gegen TTV Altfinnentrop");
+	h.push("19.2.2016|19:30 - Auswaertsspiel gegen TV Attendorn III");
+	h.push("4.3.2016|20:15 - Auswaertsspiel gegen TTG Netphen V");
+	h.push("8.4.2016|20:00 - Auswaertsspiel gegen DJK TuS 02 Siegen II");
+	h.push("15.4.2016|20:00 - Auswaertsspiel gegen TTV Lennestadt");
 	
 	var dH;
 	var eH;
@@ -343,7 +343,7 @@ function getMonthname(monthnumber)
 		  return 'Februar';
 		  break;
 		case 3:
-		  return 'März';
+		  return 'Maerz';
 		  break;
 		case 4:
 		  return 'April';
