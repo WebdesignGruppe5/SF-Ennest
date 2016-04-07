@@ -1,3 +1,36 @@
+function Utf8Decode(strUtf) {
+    // note: decode 3-byte chars first as decoded 2-byte strings could appear to be 3-byte char!
+    var strUni = strUtf.replace(
+        /[\u00e0-\u00ef][\u0080-\u00bf][\u0080-\u00bf]/g,  // 3-byte chars
+        function(c) {  // (note parentheses for precedence)
+            var cc = ((c.charCodeAt(0)&0x0f)<<12) | ((c.charCodeAt(1)&0x3f)<<6) | ( c.charCodeAt(2)&0x3f);
+            return String.fromCharCode(cc); }
+    );
+    strUni = strUni.replace(
+        /[\u00c0-\u00df][\u0080-\u00bf]/g,                 // 2-byte chars
+        function(c) {  // (note parentheses for precedence)
+            var cc = (c.charCodeAt(0)&0x1f)<<6 | c.charCodeAt(1)&0x3f;
+            return String.fromCharCode(cc); }
+    );
+    return strUni;
+}
+
+function Utf8Encode(strUni) {
+    var strUtf = strUni.replace(
+        /[\u0080-\u07ff]/g,  // U+0080 - U+07FF => 2 bytes 110yyyyy, 10zzzzzz
+        function(c) {
+            var cc = c.charCodeAt(0);
+            return String.fromCharCode(0xc0 | cc>>6, 0x80 | cc&0x3f); }
+    );
+    strUtf = strUtf.replace(
+        /[\u0800-\uffff]/g,  // U+0800 - U+FFFF => 3 bytes 1110xxxx, 10yyyyyy, 10zzzzzz
+        function(c) {
+            var cc = c.charCodeAt(0);
+            return String.fromCharCode(0xe0 | cc>>12, 0x80 | cc>>6&0x3F, 0x80 | cc&0x3f); }
+    );
+    return strUtf;
+}
+
 /**
 * Ist ein Datum gültig
 * @param y: Jahr
@@ -187,7 +220,7 @@ function loadcalendar()
 			else{
 				entry.style.backgroundColor='#00FFFF';
 				//Eventtext wird als Tooltip angezeigt
-				entry.title = getEventtext(y,m,zahl);
+				entry.title = Utf8Decode(getEventtext(y,m,zahl));
 				bEvent = true;
 			}
 			//Wenn Tag ein Feiertag ist
@@ -248,20 +281,20 @@ function getEventtext(y,m,d)
 	
 	//exemplarisch nehme ich eine
 	//Liste an Festivals her
-	h.push("20.2.2016|19:00 - TT-Generalversammlung in der SGV-Hütte");
+	h.push("20.2.2016|19:00 - TT-Generalversammlung in der SGV-Huette");
 	h.push("31.10.2016|19:00 - Halloween-Feier auf dem Sportplatz Holzweg");
 	h.push("28.12.2016|20:00 - Weihnachtskegeln in der Tennishalle Milstenau");
 	h.push("21.1.2016|19:30 - Heimspiel gegen TSV Aue-Wingeshausen");
 	h.push("11.2.2016|19:30 - Heimspiel gegen FGF Saalhausen");
-	h.push("25.2.2016|19:30 - Heimspiel gegen TTF Pannenklöpper Olpe");
+	h.push("25.2.2016|19:30 - Heimspiel gegen TTF Pannenkloepper Olpe");
 	h.push("10.3.2016|19:30 - Heimspiel gegen TuS Hilchenbach II");
 	h.push("21.4.2016|19:30 - Heimspiel gegen TTC Wenden II");
-	h.push("11.1.2016|20:00 - Auswärtsspiel gegen SV Dahl-Friedrichsthal II");
-	h.push("29.1.2016|19:30 - Auswärtsspiel gegen  	TTV Altfinnentrop");
-	h.push("19.2.2016|19:30 - Auswärtsspiel gegen TV Attendorn III");
-	h.push("4.3.2016|20:15 - Auswärtsspiel gegen TTG Netphen V");
-	h.push("8.4.2016|20:00 - Auswärtsspiel gegen DJK TuS 02 Siegen II");
-	h.push("15.4.2016|20:00 - Auswärtsspiel gegen TTV Lennestadt");
+	h.push("11.1.2016|20:00 - Auswaertsspiel gegen SV Dahl-Friedrichsthal II");
+	h.push("29.1.2016|19:30 - Auswaertsspiel gegen TTV Altfinnentrop");
+	h.push("19.2.2016|19:30 - Auswaertsspiel gegen TV Attendorn III");
+	h.push("4.3.2016|20:15 - Auswaertsspiel gegen TTG Netphen V");
+	h.push("8.4.2016|20:00 - Auswaertsspiel gegen DJK TuS 02 Siegen II");
+	h.push("15.4.2016|20:00 - Auswaertsspiel gegen TTV Lennestadt");
 	
 	var dH;
 	var eH;
@@ -343,7 +376,7 @@ function getMonthname(monthnumber)
 		  return 'Februar';
 		  break;
 		case 3:
-		  return 'März';
+		  return 'Maerz';
 		  break;
 		case 4:
 		  return 'April';
