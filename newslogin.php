@@ -15,14 +15,19 @@
       <head>
         <meta charset='utf-8'>
         <title>Login</title>
+        
+        <link rel='stylesheet' href='css/bootstrap.min.css'>
+        <link rel='stylesheet' href='css/main.css'>
       </head>
       <body>
-
+      
+      <div class = 'text-center'>
           <form method='POST' action='login.php'> 
             Ihr Username: <input name='username'><br> 
-            Ihr Passwort: <input name='passwort' type=password><br> 
+            Ihr Passwort:  <input name='passwort' type=password><br> 
             <input type=submit name=submit value='Einloggen'> 
-          </form> 
+          </form>
+    </div>
 
       </body>
     </html>

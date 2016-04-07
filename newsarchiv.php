@@ -92,7 +92,7 @@
                                 {
                                     printf ("
                                     <div class='row abstand'>
-                                        <div class='col-xs-12 col-sm-10'>
+                                        <div class='col-xs-12 col-sm-10 panel'>
                                             <b>%s</b> 
                                             <br>
                                                 <h4>%s</h4>
@@ -107,7 +107,7 @@
                                 {
                                     printf ("
                                     <div class='row abstand'>
-                                        <div class='col-xs-12 col-sm-8'>
+                                        <div class='col-xs-12 col-sm-8 panel'>
                                             <b>%s</b> 
                                             <br>
                                                 <h4>%s</h4>
